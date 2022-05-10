@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EScopo de variáveis</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            // escopo de variaveis
+
+            var teste = 42 //variavel global
+
+            function somar(num1, num2){
+                //variavel local (só é reconhecida dentro do bloco da função)
+                var valor = 5;
+                return valor + num1 + num2;
+            }
+
+            for(var i = 0; i < 4; i++){
+                var outra =5; //variavel global
+                console.log(i * outra);
+            }
+
+            console.log(somar(4, 5))
+
+            //console,log(valor); //ReferenceError
+
+            console.log(outra); //temos acesso porque foi declarada em um bloco for
+            console.log(i)
+
+            for(var j = 0; j < 5; j++){
+                let uma = 12; //variavel local
+                console.log(j * uma);
+            }
+
+            console.log(uma); //local // ReferenceError
+            console.log(j); //global
+
+
+        </script>
+    </body>
+</html>
