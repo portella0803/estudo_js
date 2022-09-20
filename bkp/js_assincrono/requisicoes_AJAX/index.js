@@ -57,6 +57,11 @@ btn.onclick = function(){
                 div.appendChild(spanNone)
 
                 input.value = ''
+            }else{
+                txtNome = document.createTextNode(`Não encontrei o usuário ${input.value}`)
+                //adiciona o texto ao span e o span à div
+                spanNone.appendChild(txtNome)
+                div.appendChild(spanNone)
             }
         }
     }
